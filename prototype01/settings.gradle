@@ -1,0 +1,4 @@
+rootProject.name = 'prototype01'
+
+include 'core'
+include 'lwjgl3'
