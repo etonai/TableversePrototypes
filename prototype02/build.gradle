@@ -1,0 +1,21 @@
+allprojects {
+    apply plugin: 'eclipse'
+
+    version = '0.1'
+
+    ext {
+        appName = 'TableverseRPGPrototype01'
+        gdxVersion = "${gdxVersion}"
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://s01.oss.sonatype.org' }
+    }
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}

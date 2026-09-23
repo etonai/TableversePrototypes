@@ -1,0 +1,15 @@
+apply plugin: 'application'
+
+mainClassName = 'com.tableverse.prototype01.lwjgl3.Lwjgl3Launcher'
+
+sourceSets.main.resources.srcDirs += [ rootProject.file('assets').path ]
+
+application {
+    mainClass = mainClassName
+}
+
+dependencies {
+    implementation project(':core')
+    api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
